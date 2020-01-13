@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
     }
     
-    
+//    MARK: Create Search NC
     func createSearchNC() -> UINavigationController {
         let searchVC = SearchVC()
         searchVC.title = "Search"
@@ -32,7 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return UINavigationController(rootViewController: searchVC)
     }
     
-    
+//    MARK: Create Favorites List NC
     func createFavoritesListNC() -> UINavigationController {
         let favoritesListVC = FavoritesListVC()
         favoritesListVC.title = "Favorites"
@@ -41,7 +41,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return UINavigationController(rootViewController: favoritesListVC)
     }
     
-    
+//    MARK: Create Tab Bar Controller
     func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
         UITabBar.appearance().tintColor = .systemGreen
