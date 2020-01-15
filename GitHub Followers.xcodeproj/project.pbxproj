@@ -88,7 +88,6 @@
 				BA691F2923C6ACA5008EFFC2 /* SceneDelegate.swift */,
 				BA691F3023C6ACA8008EFFC2 /* Assets.xcassets */,
 				BA691F3223C6ACA8008EFFC2 /* LaunchScreen.storyboard */,
-				BA691F3523C6ACA8008EFFC2 /* Info.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -116,6 +115,7 @@
 				BA33644D23CEBB3700A7A633 /* Screens */,
 				BA33645023CEBC1800A7A633 /* Support */,
 				BA33644F23CEBBBD00A7A633 /* Extensions */,
+				BA691F3523C6ACA8008EFFC2 /* Info.plist */,
 			);
 			path = "GitHub Followers";
 			sourceTree = "<group>";
