@@ -12,6 +12,8 @@
 		BA33644823CEA99000A7A633 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33644723CEA99000A7A633 /* GFBodyLabel.swift */; };
 		BA33644A23CEAC0000A7A633 /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33644923CEAC0000A7A633 /* GFAlertVC.swift */; };
 		BA33644C23CEB4BF00A7A633 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA33644B23CEB4BF00A7A633 /* UIViewController+Ext.swift */; };
+		BA422EAA23CFFDCD009A5AED /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA422EA923CFFDCD009A5AED /* Follower.swift */; };
+		BA422EAC23D00006009A5AED /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA422EAB23D00006009A5AED /* User.swift */; };
 		BA691F2823C6ACA5008EFFC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA691F2723C6ACA5008EFFC2 /* AppDelegate.swift */; };
 		BA691F2A23C6ACA5008EFFC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA691F2923C6ACA5008EFFC2 /* SceneDelegate.swift */; };
 		BA691F3123C6ACA8008EFFC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA691F3023C6ACA8008EFFC2 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		BA33644723CEA99000A7A633 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		BA33644923CEAC0000A7A633 /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		BA33644B23CEB4BF00A7A633 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		BA422EA923CFFDCD009A5AED /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		BA422EAB23D00006009A5AED /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BA691F2423C6ACA5008EFFC2 /* GitHub Followers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub Followers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA691F2723C6ACA5008EFFC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA691F2923C6ACA5008EFFC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		BA422EA823CFFDB7009A5AED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA422EA923CFFDCD009A5AED /* Follower.swift */,
+				BA422EAB23D00006009A5AED /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BA691F1B23C6ACA5008EFFC2 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +124,7 @@
 		BA691F2623C6ACA5008EFFC2 /* GitHub Followers */ = {
 			isa = PBXGroup;
 			children = (
+				BA422EA823CFFDB7009A5AED /* Model */,
 				BA33644E23CEBB7700A7A633 /* Custom Views */,
 				BA33644D23CEBB3700A7A633 /* Screens */,
 				BA33645023CEBC1800A7A633 /* Support */,
@@ -190,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA422EAC23D00006009A5AED /* User.swift in Sources */,
 				BAA21D4323CC10490068D971 /* GFTextField.swift in Sources */,
 				BA33644A23CEAC0000A7A633 /* GFAlertVC.swift in Sources */,
 				BA76A94323C80B960045F216 /* FavoritesListVC.swift in Sources */,
@@ -197,6 +212,7 @@
 				BAA21D4123CC0D3A0068D971 /* GFButton.swift in Sources */,
 				BA76A94123C80B450045F216 /* SearchVC.swift in Sources */,
 				BA33644823CEA99000A7A633 /* GFBodyLabel.swift in Sources */,
+				BA422EAA23CFFDCD009A5AED /* Follower.swift in Sources */,
 				BA33644623CEA50B00A7A633 /* GFTitleLabel.swift in Sources */,
 				BA33644423CE9C4600A7A633 /* FollowerListVC.swift in Sources */,
 				BA691F2823C6ACA5008EFFC2 /* AppDelegate.swift in Sources */,
