@@ -23,6 +23,7 @@
 		BA76A94323C80B960045F216 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA76A94223C80B960045F216 /* FavoritesListVC.swift */; };
 		BAA21D4123CC0D3A0068D971 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA21D4023CC0D3A0068D971 /* GFButton.swift */; };
 		BAA21D4323CC10490068D971 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA21D4223CC10490068D971 /* GFTextField.swift */; };
+		BAE4BDDE23D14B96004E460F /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE4BDDD23D14B96004E460F /* ErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		BA76A94223C80B960045F216 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		BAA21D4023CC0D3A0068D971 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		BAA21D4223CC10490068D971 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		BAE4BDDD23D14B96004E460F /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		BA691F2623C6ACA5008EFFC2 /* GitHub Followers */ = {
 			isa = PBXGroup;
 			children = (
+				BAE4BDDC23D14B7C004E460F /* Utilities */,
 				BA422EAD23D00576009A5AED /* Managers */,
 				BA422EA823CFFDB7009A5AED /* Model */,
 				BA33644E23CEBB7700A7A633 /* Custom Views */,
@@ -143,6 +146,14 @@
 				BA691F3523C6ACA8008EFFC2 /* Info.plist */,
 			);
 			path = "GitHub Followers";
+			sourceTree = "<group>";
+		};
+		BAE4BDDC23D14B7C004E460F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BAE4BDDD23D14B96004E460F /* ErrorMessage.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +233,7 @@
 				BA33644C23CEB4BF00A7A633 /* UIViewController+Ext.swift in Sources */,
 				BAA21D4123CC0D3A0068D971 /* GFButton.swift in Sources */,
 				BA76A94123C80B450045F216 /* SearchVC.swift in Sources */,
+				BAE4BDDE23D14B96004E460F /* ErrorMessage.swift in Sources */,
 				BA33644823CEA99000A7A633 /* GFBodyLabel.swift in Sources */,
 				BA422EAA23CFFDCD009A5AED /* Follower.swift in Sources */,
 				BA33644623CEA50B00A7A633 /* GFTitleLabel.swift in Sources */,
