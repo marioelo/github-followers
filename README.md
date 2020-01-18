@@ -32,11 +32,3 @@ This project is intentionally open-ended. We want to see you create when it’s 
 # Design:
 
 - We want to see what kind of design you come up with. We don’t expect you to be a professional designer, but we believe our developers should have rudamentary design knowledge. 
-
-
-Please don't hesitate to ask any clarifying questions about the project if you have any.
-
-**DUE DATE:**  Monday, Feb 18th @ 12pm PST.
-
-Best of luck! Can’t wait to see what you create.
-
