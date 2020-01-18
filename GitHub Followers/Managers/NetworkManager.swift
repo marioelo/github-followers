@@ -6,11 +6,12 @@
 //  Copyright © 2020 Mario Elorza. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class NetworkManager {
     static let shared   = NetworkManager()
-    let baseURL         = "https://api.github.com"
+    private let baseURL = "https://api.github.com"
+    let cache           = NSCache<NSString, UIImage>()
     
     private init() {}
     
