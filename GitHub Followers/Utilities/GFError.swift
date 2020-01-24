@@ -1,8 +1,8 @@
 //
-//  ErrorMessage.swift
+//  GFError.swift
 //  GitHub Followers
 //
-//  Created by Mario Elorza on 16-01-20.
+//  Created by Mario Elorza on 23-01-20.
 //  Copyright © 2020 Mario Elorza. All rights reserved.
 //
 
