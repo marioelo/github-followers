@@ -22,6 +22,7 @@ class UserInfoVC: UIViewController {
     var itemViews: [UIView] = []
     
     var username: String!
+    weak var delegate: FollowerListVCDelegate!
 
     
     override func viewDidLoad() {
@@ -124,7 +125,13 @@ extension UserInfoVC: UserInfoVCDelegate {
     }
     
     func didTapGetFollowers(for user: User) {
-        // testing
+        guard user.followers != 0 else {
+            pressentGFAlertOnMainThread(title: "No followers", message: "This user has no follosers. What a shame 😔.", buttonTitle: "So sad")
+            return
+        }
+        
+        delegate.didRequestFollowers(for: user.login)
+        dismissVC()
     }
     
 }
