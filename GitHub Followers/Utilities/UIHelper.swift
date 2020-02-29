@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct UIHelper {
+enum UIHelper {
     
     //    MARK: create three column flow layout
     static func createThreeColumnFlowLayout(in view: UIView) -> UICollectionViewFlowLayout {
