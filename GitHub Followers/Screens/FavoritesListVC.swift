@@ -33,10 +33,11 @@ class FavoritesListVC: GFDataLoadingVC {
     
     func configureTableView() {
         view.addSubview(tableView)
-        tableView.frame         = view.bounds
-        tableView.rowHeight     = 80
-        tableView.delegate      = self
-        tableView.dataSource    = self
+        tableView.frame             = view.bounds
+        tableView.rowHeight         = 80
+        tableView.delegate          = self
+        tableView.dataSource        = self
+        tableView.tableFooterView   = UIView(frame: .zero)
         
         tableView.register(FavoriteCell.self, forCellReuseIdentifier: FavoriteCell.reuseID)
     }
@@ -48,7 +49,6 @@ class FavoritesListVC: GFDataLoadingVC {
             
             switch result {
             case .success(let favorites):
-                
                 if favorites.isEmpty {
                     self.showEmptyStateView(with: "No Favorites?\nAdd one on the follower screen", in: self.view)
                 } else {
