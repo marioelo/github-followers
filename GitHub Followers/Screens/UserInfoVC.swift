@@ -22,7 +22,7 @@ class UserInfoVC: GFDataLoadingVC {
     
     var username: String!
     weak var delegate: UserInfoVCDelegate!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,11 +109,11 @@ class UserInfoVC: GFDataLoadingVC {
     @objc func dismissVC() {
         self.dismiss(animated: true)
     }
-
+    
 }
 
-
-extension UserInfoVC: ItemInfoVCDelegate {
+extension UserInfoVC: GFRepoItemVCDelegate {
+    
     func didTapGithubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
             pressentGFAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user is invalid", buttonTitle: "Ok")
@@ -122,6 +122,9 @@ extension UserInfoVC: ItemInfoVCDelegate {
         
         presentSafariVC(with: url)
     }
+}
+
+extension UserInfoVC: GFFollowerItemVCDelegate {
     
     func didTapGetFollowers(for user: User) {
         guard user.followers != 0 else {
@@ -132,5 +135,4 @@ extension UserInfoVC: ItemInfoVCDelegate {
         delegate.didRequestFollowers(for: user.login)
         dismissVC()
     }
-    
 }
