@@ -33,7 +33,7 @@ class GFUserInfoHeaderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubviews()
+        view.addSubviews(avatarImageView, usernameLabel, nameLabel, localtionImageView, locationLabel, bioLabel)
         layoutUI()
         configureUIElements()
         downloadAvatarImage()
@@ -59,15 +59,6 @@ class GFUserInfoHeaderVC: UIViewController {
         }
     }
     
-    
-    func addSubviews() {
-        view.addSubview(avatarImageView)
-        view.addSubview(usernameLabel)
-        view.addSubview(nameLabel)
-        view.addSubview(localtionImageView)
-        view.addSubview(locationLabel)
-        view.addSubview(bioLabel)
-    }
     
     func layoutUI() {
         let padding: CGFloat            = 20
