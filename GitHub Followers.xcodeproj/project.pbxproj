@@ -15,6 +15,7 @@
 		5365D0AC23D3C17500336F74 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365D0AB23D3C17500336F74 /* UIHelper.swift */; };
 		5365D0B423D3E55600336F74 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365D0B323D3E55600336F74 /* GFEmptyStateView.swift */; };
 		536FAA0123F5B6AB00583637 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FAA0023F5B6AB00583637 /* Date+Ext.swift */; };
+		53C3DD59240E8EAB00AB9C8E /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C3DD58240E8EAB00AB9C8E /* UITableView+Ext.swift */; };
 		53D47D0F240A09BC0048B7FA /* GFAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D47D0E240A09BC0048B7FA /* GFAlertContainerView.swift */; };
 		53D47D13240A1C500048B7FA /* GFDataLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D47D12240A1C500048B7FA /* GFDataLoadingVC.swift */; };
 		BA0EA1F423DA721C001EF4ED /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0EA1F323DA721C001EF4ED /* UserInfoVC.swift */; };
@@ -54,6 +55,7 @@
 		5365D0AB23D3C17500336F74 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		5365D0B323D3E55600336F74 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		536FAA0023F5B6AB00583637 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		53C3DD58240E8EAB00AB9C8E /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		53D47D0E240A09BC0048B7FA /* GFAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertContainerView.swift; sourceTree = "<group>"; };
 		53D47D12240A1C500048B7FA /* GFDataLoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFDataLoadingVC.swift; sourceTree = "<group>"; };
 		BA0EA1F323DA721C001EF4ED /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				BA33644B23CEB4BF00A7A633 /* UIViewController+Ext.swift */,
 				536FAA0023F5B6AB00583637 /* Date+Ext.swift */,
 				534E9A34240D86AC00E29DFE /* UIView+Ext.swift */,
+				53C3DD58240E8EAB00AB9C8E /* UITableView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				BA33644423CE9C4600A7A633 /* FollowerListVC.swift in Sources */,
 				BA691F2823C6ACA5008EFFC2 /* AppDelegate.swift in Sources */,
 				BA691F2A23C6ACA5008EFFC2 /* SceneDelegate.swift in Sources */,
+				53C3DD59240E8EAB00AB9C8E /* UITableView+Ext.swift in Sources */,
 				BAE434FE23F05F2D0032ABFF /* GFRepoItemVC.swift in Sources */,
 				BA0EA1F423DA721C001EF4ED /* UserInfoVC.swift in Sources */,
 			);
