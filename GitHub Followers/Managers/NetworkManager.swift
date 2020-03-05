@@ -9,23 +9,23 @@
 import UIKit
 
 class NetworkManager {
+    
     static let shared   = NetworkManager()
     private let baseURL = "https://api.github.com"
     let cache           = NSCache<NSString, UIImage>()
     
+    
     private init() {}
     
-    //    MARK: getFollowers
+    
     func getFollowers(for username: String, page: Int, completed: @escaping (Result<[Follower], GFError>) -> Void) {
         let endpoint = baseURL + "/users/\(username)/followers?per_page=100&page=\(page)"
         
-        //        creeate the url
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidUsername))
             return
         }
         
-        //        Basic way of networking
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             if let _ = error {
                 completed(.failure(.unableToComplete))
@@ -57,17 +57,14 @@ class NetworkManager {
     }
     
     
-    //    MARK: getUserInfo
     func getUserInfo(for username: String, completed: @escaping (Result<User, GFError>) -> Void) {
         let endpoint = baseURL + "/users/\(username)"
         
-        //        creeate the url
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidUsername))
             return
         }
         
-        //        Basic way of networking
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             if let _ = error {
                 completed(.failure(.unableToComplete))
@@ -98,8 +95,8 @@ class NetworkManager {
         task.resume()
     }
     
+    
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void) {
-        
         let cacheKey = NSString(string: urlString)
         if let image = cache.object(forKey: cacheKey) {
             completed(image)

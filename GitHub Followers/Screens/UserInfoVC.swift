@@ -36,11 +36,13 @@ class UserInfoVC: GFDataLoadingVC {
         
     }
     
+    
     func configureViewController() {
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
     }
+    
     
     func getUserInfo() {
         NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
@@ -66,9 +68,6 @@ class UserInfoVC: GFDataLoadingVC {
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             contentView.heightAnchor.constraint(equalToConstant: 600)
         ])
-        
-        
-        
     }
     
     
@@ -95,7 +94,6 @@ class UserInfoVC: GFDataLoadingVC {
             ])
         }
         
-        
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor),
             headerView.heightAnchor.constraint(equalToConstant: 210),
@@ -119,10 +117,10 @@ class UserInfoVC: GFDataLoadingVC {
         childVC.didMove(toParent: self)
     }
     
+    
     @objc func dismissVC() {
         self.dismiss(animated: true)
     }
-    
 }
 
 extension UserInfoVC: GFRepoItemVCDelegate {

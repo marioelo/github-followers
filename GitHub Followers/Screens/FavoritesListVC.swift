@@ -12,17 +12,20 @@ class FavoritesListVC: GFDataLoadingVC {
     
     let tableView               = UITableView()
     var favorites: [Follower]   = []
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
         configureTableView()
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getFavorites()
     }
+    
     
     func configureViewController() {
         view.backgroundColor    = .systemBackground
@@ -33,10 +36,10 @@ class FavoritesListVC: GFDataLoadingVC {
     
     func configureTableView() {
         view.addSubview(tableView)
-        tableView.frame             = view.bounds
-        tableView.rowHeight         = 80
-        tableView.delegate          = self
-        tableView.dataSource        = self
+        tableView.frame         = view.bounds
+        tableView.rowHeight     = 80
+        tableView.delegate      = self
+        tableView.dataSource    = self
         tableView.removeExcessCells()
         
         tableView.register(FavoriteCell.self, forCellReuseIdentifier: FavoriteCell.reuseID)
@@ -49,17 +52,23 @@ class FavoritesListVC: GFDataLoadingVC {
             
             switch result {
             case .success(let favorites):
-                if favorites.isEmpty {
-                    self.showEmptyStateView(with: "No Favorites?\nAdd one on the follower screen", in: self.view)
-                } else {
-                    self.favorites = favorites
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                        self.view.bringSubviewToFront(self.tableView)
-                    }
-                }
+                self.updateUI(with: favorites)
+                
             case .failure(let error):
                 self.pressentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+            }
+        }
+    }
+    
+    
+    func updateUI(with favorites: [Follower]) {
+        if favorites.isEmpty {
+            self.showEmptyStateView(with: "No Favorites?\nAdd one on the follower screen", in: self.view)
+        } else {
+            self.favorites = favorites
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.view.bringSubviewToFront(self.tableView)
             }
         }
     }
@@ -67,9 +76,11 @@ class FavoritesListVC: GFDataLoadingVC {
 
 
 extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return favorites.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteCell.reuseID) as! FavoriteCell
@@ -77,6 +88,7 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
         cell.set(favorite: favorite)
         return cell
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let favorite    = favorites[indexPath.row]
@@ -100,5 +112,4 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
             self.pressentGFAlertOnMainThread(title: "Unable to remove", message: error.rawValue, buttonTitle: "Ok")
         }
     }
-    
 }

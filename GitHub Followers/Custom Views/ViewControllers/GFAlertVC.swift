@@ -21,6 +21,7 @@ class GFAlertVC: UIViewController {
     
     let padding: CGFloat = 20
     
+    
     init(title: String, message: String, buttonTitle: String) {
         super.init(nibName: nil, bundle: nil)
         self.alertTitle     = title
@@ -33,18 +34,21 @@ class GFAlertVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
         view.addSubview(containerView)
+        
         containerView.addSubviews(titleLabel, actionButton, messageLabel)
+        
         configureContainerView()
         configureTitleLabel()
         configureActionButton()
         configureMessageLabel()
     }
     
-//    MARK: configure container view
+
     func configureContainerView() {
         NSLayoutConstraint.activate([
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -54,7 +58,7 @@ class GFAlertVC: UIViewController {
         ])
     }
     
-//    MARK: configure title label
+
     func configureTitleLabel() {
         titleLabel.text = alertTitle ?? "Something went wrong"
         
@@ -66,7 +70,7 @@ class GFAlertVC: UIViewController {
         ])
     }
     
-//    MARK: configure action button
+    
     func configureActionButton() {
         actionButton.setTitle(buttonTitle ?? "Ok", for: .normal)
         actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
@@ -79,11 +83,7 @@ class GFAlertVC: UIViewController {
         ])
     }
     
-    @objc func dismissVC() {
-        dismiss(animated: true)
-    }
     
-//    MARK: configure message label
     func configureMessageLabel() {
         messageLabel.text           = message ?? "Unable to compleate request"
         messageLabel.numberOfLines  = 4
@@ -94,5 +94,10 @@ class GFAlertVC: UIViewController {
             messageLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
             messageLabel.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -12)
         ])
+    }
+    
+    
+    @objc func dismissVC() {
+        dismiss(animated: true)
     }
 }
