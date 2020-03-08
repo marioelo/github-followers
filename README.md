@@ -1,3 +1,6 @@
+# Sean Allen iOS Course
+[seanallen.teachable.com](https://seanallen.teachable.com)
+
 # Overview:
 
 This project is intentionally open-ended. We want to see you create when it’s all up to you. The project will be assessed on your code quality, UI/UX, and overall quality and feel of the app.
